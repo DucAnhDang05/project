@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm</title>
+    <link rel="stylesheet" href="./src/style/themsanpham.css">
+</head>
+
+<body>
+    <form id="add-product-form">
+        <label for="name">Tên sản phẩm:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="brand">Thương hiệu:</label>
+        <input type="text" id="brand" name="brand" required>
+
+        <label for="price">Giá:</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="description">Mô tả:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="size">Size:</label>
+        <input type="number" id="size" name="size" required>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" required>
+
+        <label for="sale">Giảm giá (%):</label>
+        <input type="number" id="sale" name="sale" required>
+
+        <label for="status">Trạng thái:</label>
+        <input type="checkbox" id="status" name="status" checked>
+
+        <label for="productType">Loại (1 hoặc 2):</label>
+        <input type="number" id="productType" name="type" required>
+
+        <label for="images">Link hình ảnh (phân cách bằng dấu phẩy):</label>
+        <textarea id="images" name="images" required></textarea>
+
+        <input type="submit" value="Lưu">
+    </form>
+    <script src="./src/script/themsanpham.js"></script>
+</body>
+
+</html>

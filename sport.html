@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giày thể thao</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="./src/style/sport.css">
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary back1">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <i class="fa-brands fa-shoelace"></i> GIÀY CHẤT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="nav" id="top">
+                <ul class="navbar-nav">
+                    <form id="searchForm" class="d-flex" role="search" style="margin-right: 200px;" onsubmit="searchProduct(event)">
+                        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link-cart" class="nav-link active" aria-current="page" href="#">Giỏ hàng</a>
+                        <div id="cart-container" class="cart-container">
+                            <div id="cart-table" class="cart-table"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Sản phẩm
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./sport.html">Giày thể thao</a></li>
+                            <li><a class="dropdown-item" href="./sneaker.html">Giày sneaker</a></li>
+                        </ul>
+                    </li>
+                    <li id="link-login" class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="../login.html">Đăng nhập</a>
+                    </li>
+                    <li id="link-register" class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="./signup.html">Đăng ký</a>
+                    </li>
+                    <li id="link-signout" class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="./logout.html">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Giày thể thao -->
+    <section>
+            <div class="row">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner" style="margin-top: 50px;" id="sport-banner">
+                        <div class="carousel-item active" style="height: auto;object-fit: contain;">
+                            <img src="http://cdn-img-v2.webbnc.net/uploadv2/web/55/5544/slide/2017/02/10/07/23/1486710787_banner2a.png?v=4"
+                                class="d-block w-100"
+                                alt="http://cdn-img-v2.webbnc.net/uploadv2/web/55/5544/slide/2017/02/10/07/23/1486710787_banner2a.png?v=4">
+                        </div>
+                        <div class="carousel-item " style="height: auto;object-fit: contain;">
+                            <img src="http://file.hstatic.net/1000230642/collection/3_da9a91027cd0488581c18e767bd6e453.jpg"
+                                class="d-block w-100"
+                                alt="http://file.hstatic.net/1000230642/collection/3_da9a91027cd0488581c18e767bd6e453.jpg">
+                        </div>
+                        <div class="carousel-item " style="height: auto;object-fit: contain;">
+                            <img src="https://www.caoto.vn/images/slider-2.png" class="d-block w-100"
+                                alt="https://www.caoto.vn/images/slider-2.png">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <h1 style="margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" id="sport-title">GIÀY THỂ THAO</h1>
+            </div>
+            <div class="row" id="sport-product-container" style="margin-bottom: 50px;">
+        
+            </div>
+    </section>
+
+    <!-- Thanh ngang -->
+    <div class="row service">
+        <div class="service-item">
+            <i class="fa-solid fa-user-shield"></i>
+            <div class="">
+                <b>MUA SẮM AN TOÀN</b>
+                <p>Bảo đảm an toàn khi mua</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="">
+                <b>HỖ TRỢ 24/7</b>
+                <p>Tư vấn trực tuyến</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-credit-card"></i>
+            <div class="">
+                <b>THANH TOÁN ĐA DẠNG</b>
+                <p>Thuận tiện khi mua sắm</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-motorcycle"></i>
+            <div class="">
+                <b>MIỄN PHÍ GIAO HÀNG</b>
+                <p>Đơn hàng từ 600.000</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-left">
+            <i class="fa-brands fa-shoelace" style="font-size: 100px;margin-left: 100px;margin-top: 20px;"></i>
+            <b style="margin-top: 20px">CỬA HÀNG PHÂN PHỐI GIÀY CHÍNH HÃNG</b>
+            <p><i class="fa-solid fa-location-dot"></i> &ensp; Hà Nội, Việt Nam</p>
+            <p><i class="fa-solid fa-phone-volume"></i> &ensp; 1800.JQKA</p>
+            <p><i class="fa-solid fa-envelope"></i> &ensp; support@gmai.com</p>
+            <a href="https://www.facebook.com/DucAnhDang05"><i class="fa-brands fa-square-facebook"></i>&ensp; giay_chat</a>
+        </div>
+        <div class="footer-right">
+            <div>
+                <b>Hình thức thanh toán <i class="fa-solid fa-building-columns"></i></b><br>
+                <img src="https://bizweb.dktcdn.net/100/494/200/themes/918976/assets/payment.png?1706158212390">
+                <br>
+            </div>
+            <div>
+                <b>Mua qua sàn TMĐT</b>
+                <br>
+                <a
+                    href="https://www.lazada.com.ph/shop/nike?spm=a2o4l.searchlist.card.1.77f01241bfpirZ&from=onesearch_brand_1551"><img
+                        src="https://bizweb.dktcdn.net/100/494/200/themes/918976/assets/lazada.svg?1706158212390"></a>
+                <a href="https://www.sendo.vn/shop/pea-shop-hn"><img
+                        src="https://bizweb.dktcdn.net/100/494/200/themes/918976/assets/sendo.svg?1706158212390"></a>
+                <a href="https://shopee.vn/hsgiaycaocap"><img
+                        src="https://bizweb.dktcdn.net/100/494/200/themes/918976/assets/shopee.svg?1706158212390"></a>
+                <a href="https://tiki.vn/cua-hang/anta-vietnam?source_screen=product_detail&source_engine=organic"><img
+                        src="https://bizweb.dktcdn.net/100/494/200/themes/918976/assets/tiki.svg?1706158212390"></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./src/script/sport.js"></script>
+    <script src="https://kit.fontawesome.com/1d029db5f0.js" crossorigin="anonymous"></script>
+</body>
+</html>

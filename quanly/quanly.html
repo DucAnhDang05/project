@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý</title>
+</head>
+<link rel="stylesheet" href="./src/style/quanly.css" />
+
+<body>
+    <h1 style="margin-top: 10px;">QUẢN LÝ KHÁCH HÀNG</h1>
+        <div class="container-left">
+            <div>
+                <input id="searchInput" type="text" placeholder="Tìm kiếm theo tên" />
+                <button id="searchButton">Tìm kiếm</button>
+            </div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Hoạt động</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    <script type="module" src="./src/script/quanly.js"></script>
+</body>
+
+</html>

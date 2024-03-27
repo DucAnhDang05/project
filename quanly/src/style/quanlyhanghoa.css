@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: antiquewhite;
+    width: 900px;
+    height: 10%;
+    border: 1px solid black;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+.container-left input {
+    margin-left: 250px;
+    margin-top: 10px;
+}
+
+.next {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#searchInput {
+    width: 500px;
+    height: 30px;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.add {
+    background-color: aqua;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 300px;
+}
